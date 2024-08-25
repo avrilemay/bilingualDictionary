@@ -1,0 +1,22 @@
+# Nom ......... : makefile_tests
+# Rôle ........ : compile dictionnaire_test
+# Auteur ...... : Avrile Floro 
+# Version ..... : V0.1 du 17/11/23
+# Licence ..... : réalisé dans le cadre du cours d'Algo 1
+# Usage : make -f makefile_tests
+
+all: compile 
+
+compile:
+	gcc -g -DTEST -Wall dictionnaire.c test.c category.c -o dictionnaire_test
+
+clean:
+	rm -f dictionnaire_test
+	rm -f all_trad_esp_treated.txt
+	rm -f all_words_traduc_esp.txt
+	rm -f cat_mot_anglais.txt
+	rm -f cat_mot_esp.txt
+	rm -f mot_anglais.txt
+	rm -f reconstruction.txt
+	rm -f tout_anglais.txt
+	rm -f trad_espagnol.txt
